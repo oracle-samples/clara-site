@@ -1,0 +1,21 @@
+RULE ::= '(' 'defrule' RULENAME (DOCSTRING)? (PROPS)? CONDITION+ '=>'RHS')'
+
+QUERY ::= '(' 'defquery' QUERYNAME (DOCSTRING)? '[' ARG* ']' '[' CONDITION+ ']' ')'
+
+CONDITON ::= BOOLEAN_EXPR | ACCUM_EXPR | FACT_CONSTRAINT | TEST_EXPR | EXISTS_EXPR
+
+BOOLEAN_EXPR ::= '[' ( ':and' | ':or' | ':not'  ) (BOOLEAN_EXPR | FACT_CONSTRAINT) ']'
+
+EXISTS_EXPR ::='[' ':exists' FACT_CONSTRAINT ']'
+
+ACCUM_EXPR ::= '[' BINDING '<-' ACCUMULATOR ':from' FACT_CONSTRAINT ']'
+
+FACT_CONSTRAINT ::= '[' (BINDING '<-')? FACT_TYPE ( '[' DESTRUCTURED_FACT ']' )?  S-EXPRESSION* ']'
+
+TEST_EXPR ::= '[' ':test' S-EXPRESSION* ']'
+
+BINDING ::= 'A clojure symbol starting with a question mark. (?)'
+
+FACT_TYPE ::= ( KEYWORD | CLASS )
+
+DESTRUCTURED_FACT ::= 'Destructured fact used in a constraint, using the Clojure destructuring syntax.'

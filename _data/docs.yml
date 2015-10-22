@@ -1,0 +1,18 @@
+- title: Getting Started
+  docs:
+  - firststeps
+
+- title: Developer Guide
+  docs:
+  - rules
+  - queries
+  - expressions
+  - accumulators
+  - java
+
+- title: Advanced Topics
+  docs:
+  - truthmaint
+  - conflictsalience
+  - inspection
+  - durability

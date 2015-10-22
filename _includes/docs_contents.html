@@ -1,0 +1,14 @@
+<div class="unit one-fifth hide-on-mobiles">
+  <aside>
+    {% for section in site.data.docs %}
+    <h4>{{ section.title }}</h4>
+    {% include docs_ul.html items=section.docs %}
+    {% endfor %}
+
+    <h4>API DOCUMENTATION</h4>
+    <ul>
+      <li><a href="{{ site.url }}/clojuredoc/clara.rules.html">Clojure</a></li>
+      <li><a href="{{ site.url }}/javadoc/index.html">JavaDoc</a></li>
+    </ul>
+  </aside>
+</div>

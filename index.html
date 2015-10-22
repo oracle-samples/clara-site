@@ -1,0 +1,86 @@
+---
+layout: default
+---
+
+<section class="intro">
+  <div class="grid">
+    <div class="unit whole center-on-mobiles">
+      <p class="first">Retaking rules for developers</p>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="grid">
+    <div class="unit whole">
+    Rules can greatly simplify business logic, but often come in the form of limited mini-languages and complex tools. Let's take them back.
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="grid">
+  <div class="unit half">
+    <h2>Simple</h2>
+    <p>
+      Clara brings the best parts of rule engines into your code without the weight of an enterprise system.
+    </p>
+  </div>
+  <div class="clear"></div>
+    <div class="unit half">
+      <h2>Expressive</h2>
+      <p>
+        Clara keeps simple rules simple, but users can write rich logic or invoke external libraries when they need to.
+      </p>
+    </div>
+
+  </div>
+  <div class="grid">
+    <div class="unit half">
+    <h2>It's just Clojure</h2>
+    <p>Rules are just Clojure code, and can be managed and reused like anything else.</p>
+{% highlight clojure %}
+(defrule work-approval
+  "Check order approval."
+  [WorkOrder (= type :repair)
+             (= ?order-id order-id)]
+  [:not [ApprovalForm (= ?order-id approved-id)
+                      (= formname "27B-6")]]
+  =>
+  (insert! (->MissingApproval ?id "No 27B-6.")))
+
+{% endhighlight %}
+    Check out the <a href="/docs/firststeps/">developer guide</a>.
+    </div>
+    <div class="unit half">
+    <h2>Easily used from Java</h2>
+    <p>Just include your rules as a resource in your and use Java Beans or Clojure records as facts.</p>
+{% highlight java %}
+List<QueryResult> results =
+  RuleLoader.loadRules("clara.examples")
+    .insert(facts)
+    .fireRules()
+    .query("clara.examples/approvals");
+
+for (QueryResult result: results)
+  System.out.println(result.getResult("?id"));
+{% endhighlight %}
+    See the <a href="/docs/java/">Java documentation for more</a>.
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="unit whole">
+    <h2>And many other features...</h2>
+    <p>Clara supports the features you'd expect from a rule engine, such as support for <a href="/docs/truthmaint">truth maintenance</a>,
+      <a href="/docs/durability">durability</a>,
+      <a href="/docs/inspection">rule activation explanations</a>, <a href="/docs/accumulators">accumulators to reason across sets of facts</a>,
+      and others.
+      It also brings in the best ideas from functional programming, with strong immutability support making rule sessions easy to compose and work with.
+    </p>
+    </div>
+  </div>
+
+  <span class="take-action"><a href="/docs/firststeps/">Get Started</a></span>
+
+</section>
