@@ -4,6 +4,8 @@ title: First Steps
 permalink: /docs/firststeps/
 ---
 
+*This page jumps into downloading and using Clara. Some new users may be interested in learning more about [Clara's approach to rules](/docs/approach).*
+
 Let's get started! The first thing you'll need to do is bring Clara into your project. You can do this in Leiningen:
 
 {% highlight clojure %}
