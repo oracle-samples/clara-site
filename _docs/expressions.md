@@ -4,7 +4,7 @@ title: Writing Expressions
 permalink: /docs/expressions/
 ---
 
-A query or rule left-hand side is a sequence of conditions that must be satisfied for the rule or query to match. Each condition is one of the following:
+A query or rule left-hand side is a sequence of conditions, all of which must be satisfied for the rule or query to match. Each condition is one of the following:
 
 * A [fact expression](#fact-expressions), which selects a fact based on some given criteria.
 * A [boolean expression](#boolean-expressions), which is simply a hierarchical and/or/not structure of other expressions.

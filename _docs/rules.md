@@ -4,7 +4,7 @@ title: Writing Rules
 permalink: /docs/rules/
 ---
 
-Must users write rules with _defrule_, which uses this structure:
+Most users write rules with _defrule_, which uses this structure:
 
 ![defrule railroad diagram](/img/diagram/RULE.png)
 
