@@ -8,8 +8,7 @@ permalink: /help/
   <div class="unit one-third">
     <h2>Questions</h2>
     <p>
-      The <a href="https://groups.google.com/forum/?hl=en#!forum/clara-rules">Clara Rules Google Group</a> is the best place for
-      questions, problems, or other discussion.
+      The <a href="https://groups.google.com/forum/?hl=en#!forum/clara-rules">Clara Rules Google Group</a> is the best place for questions, problems, or other discussion. There is also a <a href="https://clojurians.slack.com/messages/clara/">Clara slack channel</a>.
     </p>
   </div>
 
