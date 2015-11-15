@@ -24,7 +24,7 @@ Here is a simple accumulator in action:
 Accumulators may also be used to find minimum, maximum, average values, or do other summarization or selection for a set of matching records.
 
 # Writing Accumulators
-Clara provides a rich set of built-in accumulators, but advanced use cases may require customized accumulators over a collection of facts. Accumulator authors use the [accum](/clojuredoc/clara.rules.accumulators.html#var-accum) function in the clara.rules.accumulators namespace, and must provide these parts:
+Clara provides a rich set of built-in accumulators, but advanced use cases may require customized accumulators over a collection of facts. Accumulator authors use the [accum]({{site.clojuredoc}}clara.rules.accumulators.html#var-accum) function in the clara.rules.accumulators namespace, and must provide these parts:
 
 * **reduce-fn** - A reduce function, in the style of clojure.core.reducers, which reduces a collection of values into a single output
 * **combine-fn** - A combine function, in the style of clojure.core.reducers, which combines the outputs of two reduce-fn operations into a new, single output.
@@ -32,4 +32,4 @@ Clara provides a rich set of built-in accumulators, but advanced use cases may r
 * **retract-fn** - An optional function that accepts a previously reduced output and a fact, and returns a new reduced output with the given fact retracted.
 * **convert-return-fn** - an operation that performs some conversion on the reduce/combine value before returning it to the caller
 
-A set of [common accumulators](/clojuredoc/clara.rules.accumulators.html#var-all) is also pre-defined for convenience.
+A set of [common accumulators]({{site.clojuredoc}}clara.rules.accumulators.html#var-all) is also pre-defined for convenience.

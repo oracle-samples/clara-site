@@ -9,7 +9,7 @@ permalink: /docs/firststeps/
 Let's get started! The first thing you'll need to do is bring Clara into your project. You can do this in Leiningen:
 
 {% highlight clojure %}
-[org.toomuchcode/clara-rules "0.8.9"]
+[org.toomuchcode/clara-rules "{{site.clara_version}}"]
 {% endhighlight %}
 
 or to your Maven POM:
@@ -18,7 +18,7 @@ or to your Maven POM:
 <dependency>
   <groupId>org.toomuchcode</groupId>
   <artifactId>clara-rules</artifactId>
-  <version>0.8.9</version>
+  <version>{{site.clara_version}}</version>
 </dependency>
 {% endhighlight %}
 

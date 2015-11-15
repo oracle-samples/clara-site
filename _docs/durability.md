@@ -8,7 +8,7 @@ permalink: /docs/durability/
 
 The state of Clara sessions can be obtained as a data structure that can be persisted and reloaded as needed. Clara doesn't define a storage mechanism, but users can safely write session state as an EDN or Fressian structure to arbitrary external storage.
 
-Durability support is provided by the [clara.rules.durability](/clojuredoc/clara.rules.durability.html) namespace. Here's an example of use:
+Durability support is provided by the [clara.rules.durability]({{site.clojuredoc}}clara.rules.durability.html) namespace. Here's an example of use:
 
 {% highlight clojure %}
 (ns clara.durability-example
@@ -47,4 +47,4 @@ Durability support is provided by the [clara.rules.durability](/clojuredoc/clara
 
 {% endhighlight %}
 
-A [complete example is available in the clara-examples project](https://github.com/rbrush/clara-examples/blob/master/src/main/clojure/clara/examples/durability.clj). Also see the [clara.rules.durability](/clojuredoc/clara.rules.durability.html) namespace for details.
+A [complete example is available in the clara-examples project](https://github.com/rbrush/clara-examples/blob/master/src/main/clojure/clara/examples/durability.clj). Also see the [clara.rules.durability]({{site.clojuredoc}}clara.rules.durability.html) namespace for details.

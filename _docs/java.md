@@ -9,14 +9,14 @@ Clara offers first-class integration with Java in two ways:
 * Java Beans are treated as first-class facts
 * A simple Java API makes Clara easy to use
 
-Rules can be loaded very simply by using the [clara.rules.RuleLoader](/javadoc/clara/rules/RuleLoader.html).
+Rules can be loaded very simply by using the [clara.rules.RuleLoader]({{site.javadoc}}clara/rules/RuleLoader.html).
 
 {% highlight java %}
 static final WorkingMemory emptyMemory =
   RuleLoader.loadRules("clara.examples.java");
 {% endhighlight %}
 
-The returned [WorkingMemory](/javadoc/clara/rules/WorkingMemory.html) is an immutable object, and any changes like adding facts or fire rules creates a new WorkingMemory, just as the direct Clojure use does.
+The returned [WorkingMemory]({{site.javadoc}}clara/rules/WorkingMemory.html) is an immutable object, and any changes like adding facts or fire rules creates a new WorkingMemory, just as the direct Clojure use does.
 
 _Don't fear: internally, the new WorkingMemory shares most of its state with the previous version, so this is efficient!_
 

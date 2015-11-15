@@ -4,7 +4,7 @@ title: Session Inspection
 permalink: /docs/inspection/
 ---
 
-The [clara.tools.inspect](/clojuredoc/clara.tools.inspect.html) namespace offers functions to inspect and understand the state of rule sessions.
+The [clara.tools.inspect]({{site.clojuredoc}}clara.tools.inspect.html) namespace offers functions to inspect and understand the state of rule sessions.
 
 The ```inspect``` function in that namespace returns a data structure that can be used to see what rules or queries were activated, and what went into that activation.
 
@@ -32,4 +32,4 @@ rule example.demo/restricted-items
        where [(= ?location location) (= ?type type)]
 {% endhighlight %}
 
-See [clara.tools.inspect](/clojuredoc/clara.tools.inspect.html) namespace for more details.
+See [clara.tools.inspect]({{site.clojuredoc}}clara.tools.inspect.html) namespace for more details.
