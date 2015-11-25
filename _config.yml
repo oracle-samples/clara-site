@@ -17,6 +17,6 @@ collections:
 markdown: kramdown
 
 # Clara version and documentation location.
-clara_version: 0.9.0
-javadoc: /apidocs/0.9.0/java/
-clojuredoc: /apidocs/0.9.0/clojure/
+clara_version: 0.9.1
+javadoc: /apidocs/0.9.1/java/
+clojuredoc: /apidocs/0.9.1/clojure/
