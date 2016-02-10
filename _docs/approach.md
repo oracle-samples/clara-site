@@ -40,13 +40,13 @@ Note that Clara *can* be used as a core engine to support tools built for a busi
 ## Why Clojure?
 There are lots of great reasons to use Clojure for many programming needs, but I'll let Rich Hickey's [Simple Made Easy](http://www.infoq.com/presentations/Simple-Made-Easy) talk cover those. Here are a few distinct advantages of Clojure made it an easy choice for Clara:
 
-###Expressiveness
+### Expressiveness
 We didn't want to fall into the trap of most rule engines, which used a limited host language that blocked easy expression or invocation of rich logic. Limited languages are great for limited problems, but they can become an obstacle as problems evolve.
 
-###Reach
+### Reach
 Clojure can run almost anywhere Java can run, and ClojureScript can run in any modern web browser.  It also offers excellent interop with host languages, making Clara easily used in any Java project.
 
-###Macros
+### Macros
 Lisp-style macros are what makes Clara possible. At its core, Clara is a collection of macros that that takes a set of independent rules, identifies and merges commonality, and compiles those rules into an efficient executable structure.
 
 ## The best of functional programming with the best of rule engines
