@@ -55,4 +55,4 @@ Here we demonstrate _variable binding_ and _unification_ between rule conditions
 
 ## What's next?
 * See the [Writing Expressions](/docs/expressions) section for details on writing expressions for a rule's left-hand side.
-* See the [Writing Queries](/docs/queries) section for how to query a the a rule session.
+* See the [Writing Queries](/docs/queries) section for how to query a rule session.
