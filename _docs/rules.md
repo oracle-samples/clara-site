@@ -44,7 +44,7 @@ This is just a Clojure expression! It can call arbitrary functions or even have 
 Here's one that is a bit more sophisticated:
 
 {% highlight clojure %}
-(defrule grand-discount-months  
+(defrule grant-discount-months  
   [Purchase (= ?month (get-month date))]
   [DiscountMonth (= ?month month)]
   =>
