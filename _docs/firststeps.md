@@ -84,4 +84,4 @@ Notify Alice that Acme has a new support request!
 Of course, a real rule set would infer new knowledge and offer ways to query it.
 
 * See the [writing rules page](/docs/rules/) for more realistic rules
-* See the [clara-examples project](https://github.com/rbrush/clara-examples) for more sophsticated examples
+* See the [clara-examples project](https://github.com/rbrush/clara-examples) for more sophisticated examples
