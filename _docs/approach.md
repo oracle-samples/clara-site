@@ -20,7 +20,7 @@ if a person has a gold membership since year Y, she is a VIP
 if a person is a VIP, send an invitation to a special event.
 {% endhighlight %}
 
-Such patterns apply to almost to almost any institution, ranging from business policy to regulation to medical knowledge.
+Such patterns apply to almost any institution, ranging from business policy to regulation to medical knowledge.
 
 We can break this down into functions and objects, but then we have to explicitly wire the inputs and outputs of each rule. If requirements change to need new input for an *is-vip?* function, we have to update all callers of that function, which could require broad refactoring to make sure they have the needed input. Both functional and object-oriented approaches are subject to such complexity.
 
