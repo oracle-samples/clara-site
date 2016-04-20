@@ -89,7 +89,7 @@ If no destructuring block is provided at all, then the default destructuring sim
 ## Boolean Expressions
 ![boolean expression](/img/diagram/BOOLEAN_EXPR.png)
 
-Boolean expressions are simply prefix-style boolean operations over fact expressions, or nested boolean expressions. Clara prefers the use of keyword ':and', :or', and ':not' for its boolean expressions to keep clear what expressions are part of a Rete network as opposed to a normal Clojure expression.
+Boolean expressions are simply prefix-style boolean operations over fact expressions, or nested boolean expressions. Clara requires the use of keyword ':and', :or', and ':not' for its boolean expressions to keep clear what expressions are part of a Rete network as opposed to a normal Clojure expression.
 
 An example boolean expression may look like this:
 
@@ -101,6 +101,8 @@ An example boolean expression may look like this:
 This will generate a rule that fires if the Customer fact has a vip status, **or** there is a promotion of type discount month.
 
 :and, :or, and :not operations can be nested as one would expect.
+
+For further information, see [Boolean Expressions](/docs/booleans).
 
 ## Tests
 ![test expression](/img/diagram/TEST_EXPR.png)
