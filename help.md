@@ -31,6 +31,5 @@ permalink: /help/
       </div>
 
     </div>
-  </div>
 
 </section>
