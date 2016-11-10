@@ -9,14 +9,14 @@ permalink: /docs/firststeps/
 Let's get started! The first thing you'll need to do is bring Clara into your project. You can do this in Leiningen:
 
 {% highlight clojure %}
-[org.toomuchcode/clara-rules "{{site.clara_version}}"]
+[com.cerner/clara-rules "{{site.clara_version}}"]
 {% endhighlight %}
 
 or to your Maven POM:
 
 {% highlight xml %}
 <dependency>
-  <groupId>org.toomuchcode</groupId>
+  <groupId>com.cerner</groupId>
   <artifactId>clara-rules</artifactId>
   <version>{{site.clara_version}}</version>
 </dependency>
@@ -84,4 +84,4 @@ Notify Alice that Acme has a new support request!
 Of course, a real rule set would infer new knowledge and offer ways to query it.
 
 * See the [writing rules page](/docs/rules/) for more realistic rules
-* See the [clara-examples project](https://github.com/rbrush/clara-examples) for more sophisticated examples
+* See the [clara-examples project](https://github.com/cerner/clara-examples) for more sophisticated examples

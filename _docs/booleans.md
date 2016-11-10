@@ -58,7 +58,7 @@ A key point here is that the conditions in a Clara rule have an
 implicit :and.  An explicit :and is useful when it is nested inside another boolean condition.
 
 The file in clara-examples for boolean expressions contains some more examples:
-[clara-examples boolean expressions](https://github.com/rbrush/clara-examples/blob/master/src/main/clojure/clara/examples/booleans.clj)
+[clara-examples boolean expressions](https://github.com/cerner/clara-examples/blob/master/src/main/clojure/clara/examples/booleans.clj)
 
 Facts for the preceding examples:
 {% highlight clojure %}

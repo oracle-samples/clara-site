@@ -47,4 +47,4 @@ Durability support is provided by the [clara.rules.durability]({{site.clojuredoc
 
 {% endhighlight %}
 
-A [complete example is available in the clara-examples project](https://github.com/rbrush/clara-examples/blob/master/src/main/clojure/clara/examples/durability.clj). Also see the [clara.rules.durability]({{site.clojuredoc}}clara.rules.durability.html) namespace for details.
+A [complete example is available in the clara-examples project](https://github.com/cerner/clara-examples/blob/master/src/main/clojure/clara/examples/durability.clj). Also see the [clara.rules.durability]({{site.clojuredoc}}clara.rules.durability.html) namespace for details.

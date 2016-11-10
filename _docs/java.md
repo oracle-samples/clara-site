@@ -45,4 +45,4 @@ for (QueryResult result: results) {
 }
 {% endhighlight %}
 
-The full source code for this example is [here](https://github.com/rbrush/clara-examples/blob/master/src/main/java/clara/examples/java/ExampleMain.java).
+The full source code for this example is [here](https://github.com/cerner/clara-examples/blob/master/src/main/java/clara/examples/java/ExampleMain.java).

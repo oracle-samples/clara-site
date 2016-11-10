@@ -15,7 +15,7 @@ permalink: /help/
     <div class="unit one-third">
       <h2>Issues</h2>
       <p>
-        Any issues found can be logged against the <a href="https://github.com/rbrush/clara-rules/issues">Clara project on GitHub</a>.
+        Any issues found can be logged against the <a href="https://github.com/cerner/clara-rules/issues">Clara project on GitHub</a>.
       </p>
     </div>
     <div class="clear"></div>
