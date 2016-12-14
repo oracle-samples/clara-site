@@ -58,7 +58,7 @@ Now let's run those rules! We can do so from Clojure:
 (-> (mk-session 'clara.example)
     (insert (->ClientRepresentative "Alice" "Acme")
             (->SupportRequest "Acme" :high))
-    (fire-rules)))
+    (fire-rules))
 {% endhighlight %}
 
 Or from Java:
