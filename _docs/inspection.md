@@ -6,7 +6,11 @@ permalink: /docs/inspection/
 
 The [clara.tools.inspect]({{site.clojuredoc}}clara.tools.inspect.html) namespace offers functions to inspect and understand the state of rule sessions.
 
-The ```inspect``` function in that namespace returns a data structure that can be used to see what rules or queries were activated, and what went into that activation.
+The ```inspect``` function in that namespace returns a data structure with information on what has occurred in the session.  For example, it can be used to see 
+
+- What rules or queries were activated, and what went into those activations.
+- All the facts inserted by a particular rule.
+- What rule inserted a particular fact.
 
 As a convenience, the namespace also provides an ```explain-activations``` function, producing a human readable explanation of the state of a rule session. Here's an example of it in use. Running the following
 
@@ -32,4 +36,8 @@ rule example.demo/restricted-items
        where [(= ?location location) (= ?type type)]
 {% endhighlight %}
 
-See [clara.tools.inspect]({{site.clojuredoc}}clara.tools.inspect.html) namespace for more details.
+```explain-activations``` also takes a filter function that can be used to selectively choose which rules should have their activations explained.
+
+See the [clara.tools.inspect API documentation]({{site.clojuredoc}}clara.tools.inspect.html) for more details.
+
+Note that session inspection functionality related to reports on insertion of facts is unsupported on unconditionally inserted facts.  Session inspection internally uses information that is stored as part of truth maintenance to report on this, and as a result the session inspection code cannot tie an unconditionally inserted fact to the rule that inserted it.  This doesn't prevent use of session inspection on a session that contains both logically inserted and unconditionally inserted facts.   The session inspection functionality will still tie logically inserted facts and the rules that inserted them together; it just won't have the same information on unconditionally inserted facts.
