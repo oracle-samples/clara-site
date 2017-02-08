@@ -9,11 +9,11 @@
   - queries
   - expressions
   - accumulators
+  - truthmaint
   - java
 
 - title: Advanced Topics
   docs:
-  - truthmaint
   - conflictsalience
   - inspection
   - durability
