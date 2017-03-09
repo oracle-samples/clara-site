@@ -1,3 +1,4 @@
 - title: Rule writing strategies
   docs:
   - hash_joins
+  - fact_type_fn_perf
