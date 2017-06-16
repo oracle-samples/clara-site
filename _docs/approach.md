@@ -47,7 +47,7 @@ We didn't want to fall into the trap of most rule engines, which used a limited 
 Clojure can run almost anywhere Java can run, and ClojureScript can run in any modern web browser.  It also offers excellent interop with host languages, making Clara easily used in any Java project.
 
 ### Macros
-Lisp-style macros are what makes Clara possible. At its core, Clara is a collection of macros that that takes a set of independent rules, identifies and merges commonality, and compiles those rules into an efficient executable structure.
+Lisp-style macros are what makes Clara possible. At its core, Clara is a collection of macros that takes a set of independent rules, identifies and merges commonality, and compiles those rules into an efficient executable structure.
 
 ## The best of functional programming with the best of rule engines
 Finally, Clara aims to combine the best ideas from functional programming with rule engines. Clara sessions are immutable, shared state structures, like any good Clojure data structure. This offers many advantages, such as:
