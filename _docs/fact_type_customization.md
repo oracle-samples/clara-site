@@ -58,6 +58,6 @@ the fact
 {:weather-fact-type :precise-temperature-reading :temperature -10}
 {% endhighlight %}
 
-will match the rule too-cold since Clara will first call :weather-fact-type on the fact, returning the value :precise-temperature-reading.  Clara will then call the ancestors-fn with an argument of :precise-temperature-fn.  The fact will then be evaluated by all conditions on either the concrete type of :precise-temperature-reading or any of the ancestors types returned by the ancestors-fn.  In this case, since :temperature-reading is in the set of ancestors of :precise-temperatures-fn it is considered for the condition on :temperature-reading facts in too-cold.
+will match the rule too-cold since Clara will first call :weather-fact-type on the fact, returning the value :precise-temperature-reading.  Clara will then call the ancestors-fn with an argument of :precise-temperature-reading.  The fact will then be evaluated by all conditions on either the concrete type of :precise-temperature-reading or any of the ancestors types returned by the ancestors-fn.  In this case, since :temperature-reading is in the set of ancestors of :precise-temperature-reading it is considered for the condition on :temperature-reading facts in too-cold.
 
 
