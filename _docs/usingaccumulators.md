@@ -25,7 +25,7 @@ Accumulators may also be used to find minimum, maximum, and average values, or d
 
 {% highlight clojure %}
 (defrule get-windspeeds-from-location
-  [?temp <- [Temperature (= ?location location)]]
+  [?temp <- Temperature (= ?location location)]
   [?wind <- (acc/all) :from [WindSpeed (= ?location location)]]
   =>
   ;; do something
