@@ -24,7 +24,7 @@ All listeners should respect the immutability of sessions; i.e. an implementatio
 
 Clara provides a [tracing listener](https://github.com/cerner/clara-rules/blob/0.17.0/src/main/clojure/clara/tools/tracing.cljc) that simply records all interactions with the rules network and makes them available as a data structure after all rule operations conclude.  This data structure can then be examined manually, explored in a REPL, etc. For example, if we had a session with rule operations like the following:
 
-```
+{% highlight clojure %}
 (defrule too-cold-rule
    [Temperature (= ?location location) (< temperature -50)]
    =>
@@ -38,5 +38,6 @@ Clara provides a [tracing listener](https://github.com/cerner/clara-rules/blob/0
     (insert (->Temperature -70 "Alaska"))
     fire-rules
     get-trace)
-````
+{% endhighlight %}
+
 The returned trace would show rule network operations corresponding to the initial insertion of a StayInsideToday, then its retraction, then its insertion again, while session inspection would simply show that a StayInsideToday existed at the end.  In this simple case the operations performed all have obvious corresponding calls to insert and retract, but in the case of complex operations by [truth maintenance](/docs/truthmaint) this may not be the case.  Being able to inspect the actual steps of operations performed by Clara can be useful for investigating complex performance problems, possible bugs in Clara, etc.
