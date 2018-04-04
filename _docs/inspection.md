@@ -6,7 +6,7 @@ permalink: /docs/inspection/
 
 The [clara.tools.inspect]({{site.clojuredoc}}clara.tools.inspect.html) namespace offers functions to inspect and understand the state of rule sessions.
 
-The ```inspect``` function in that namespace returns a data structure with information on what has occurred in the session.  For example, it can be used to see 
+The ```inspect``` function in that namespace returns a data structure with information on what has occurred in the session.  For example, it can be used to see
 
 - What rules or queries were activated, and what went into those activations.
 - All the facts inserted by a particular rule.
@@ -41,3 +41,5 @@ rule example.demo/restricted-items
 See the [clara.tools.inspect API documentation]({{site.clojuredoc}}clara.tools.inspect.html) for more details.
 
 Note that session inspection functionality related to reports on insertion of facts is unsupported on unconditionally inserted facts.  Session inspection internally uses information that is stored as part of truth maintenance to report on this, and as a result the session inspection code cannot tie an unconditionally inserted fact to the rule that inserted it.  This doesn't prevent use of session inspection on a session that contains both logically inserted and unconditionally inserted facts.   The session inspection functionality will still tie logically inserted facts and the rules that inserted them together; it just won't have the same information on unconditionally inserted facts.
+
+Similarly, rule activation data is, by default, only available for rule activations that resulted in logical insertions that were not later retracted.  However, it is possible to collect data on all rule activations, regardless of what their consequences were and whether they were retracted.  This option must be enabled prior to calling fire-rules via the with-full-logging function since it has negative performance consequences that should be avoided by default. In particular, with-full-logging can increase memory consumption substantially if many facts in a session are retracted, since it forces the session to hold references to retracted facts that could otherwise be garbage collected.  When it is enabled this data will be returned under the :unfiltered-rule-matches key.
