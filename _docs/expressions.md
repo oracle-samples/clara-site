@@ -104,6 +104,16 @@ This will generate a rule that fires if the Customer fact has a vip status, **or
 
 For further information, see [Boolean Expressions](/docs/booleans).
 
+## Exists Expressions
+
+Exists expresssions only test for the existence or absence of matching facts without triggering for every instance of the fact.  For example:
+
+{% highlight clojure %}
+[:exists [Person (= name "Bob")]]
+{% endhighlight %}
+
+This will trigger the _first_ time a Person with the name "Bob" is inserted, but not the second or third.  It will only retract after all supporting facts are removed.
+
 ## Tests
 ![test expression](/img/diagram/TEST_EXPR.png)
 
