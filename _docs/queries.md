@@ -12,7 +12,7 @@ Queries are typically defined with **defquery**, which has the following structu
 
 A query has two major pieces:
 
-* A parameter definition, which allow callers to control the scope of the query when it is called.
+* A parameter definition, which allow callers to control the scope of the query when it is called. Parameters can be specified as symbols or keywords.
 * One or more conditions, which define the facts matching the query. These conditions are the same structure as a rule left-hand side.
 
 A sample query looks like this:
@@ -20,14 +20,14 @@ A sample query looks like this:
 {% highlight clojure %}
 (defquery get-promotions
   "Query to find promotions for the purchase."
-  [:?type]
+  [?type] ;;; can also be specified using a keyword as :?type, but symbols are more idiomatic to specify bindings.
   [?promotion <- Promotion (= ?type type)])
 {% endhighlight %}
 
 A caller may then execute that query with arguments. So if we only wanted to find lunch promotions, we might perform the query like this:
 
 {% highlight clojure %}
-(query session get-promotions :?type :lunch)
+(query session get-promotions :?type :lunch) ;;; the :?type value can also be specified as a symbol '?type, but keywords are more idiomatic to specify arguments.
 {% endhighlight %}
 
 Some queries may have no parameters. Queries return a sequence of results, with each result being a map of the a bound variable to its value. So the above query may return a sequence that looks like this:
