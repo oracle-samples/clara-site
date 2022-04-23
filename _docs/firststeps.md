@@ -12,6 +12,12 @@ Let's get started! The first thing you'll need to do is bring Clara into your pr
 [com.cerner/clara-rules "{{site.clara_version}}"]
 {% endhighlight %}
 
+or, for tools.deps, in `deps.edn`:
+
+{% highlight clojure %}
+com.cerner/clara-rules {:mvn/version "{{site.clara_version}}"}
+{% endhighlight %}
+
 or to your Maven POM:
 
 {% highlight xml %}
