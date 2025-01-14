@@ -26,7 +26,7 @@ Please consult the [security guide](./SECURITY.md) for our responsible security 
 
 Copyright (c) 2023, 2025 Oracle and/or its affiliates.
 
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License")as shown at
 
 &nbsp;&nbsp;&nbsp;&nbsp;http://www.apache.org/licenses/LICENSE-2.0
 
