@@ -1,6 +1,6 @@
 # _Project name_
 
-clara-site
+Clara Web Site source
 
 ## _About_
 
