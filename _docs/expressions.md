@@ -104,6 +104,18 @@ This will generate a rule that fires if the Customer fact has a vip status, **or
 
 For further information, see [Boolean Expressions](/docs/booleans).
 
+## Exists Expressions
+
+_:exists_ tests the existence or absence of facts without triggering for every fact instance.  For example:
+
+{% highlight clojure %}
+[:exists [Person (= name "Bob")]]
+{% endhighlight %}
+
+This will trigger the _first_ time a Person with the name "Bob" is inserted, but not the second or third.  It will only retract after all supporting facts are removed.
+
+Unbound variables are treated the same as in [accumulators](/docs/accumulators/); the :exists rule will trigger once for each distinct set of unbound values.
+
 ## Tests
 ![test expression](/img/diagram/TEST_EXPR.png)
 
